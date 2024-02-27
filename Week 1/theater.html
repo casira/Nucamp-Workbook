@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Magical Mystery Theater</title>
+  </head>
+  <body>
+    <h1>Magical Mystery Theater</h1>
+    <button type="button" onclick="buyTicket()">Purchase Ticket</button>
+    <script>
+      const ticket = 8;
+      const discountTicket = ticket - 3;
+      let price;
+      //User prompts
+      function buyTicket() {
+        const age = prompt("How old are you?");
+        if (age < 10 || age > 60) {
+          alert(`Your ticket price is $${discountTicket}`);
+        } else {
+          alert(`Your ticket price is $${ticket}`);
+        }
+      }
+      //Discount determination
+    </script>
+  </body>
+</html>

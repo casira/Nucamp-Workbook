@@ -29,7 +29,7 @@
       }
 
       function checkHeight(attraction, height) {
-        if (attraction === "wave" && height >= WAVE_POOL_MIN_HEIGHT) {
+        /*       if (attraction === "wave" && height >= WAVE_POOL_MIN_HEIGHT) {
           return true;
         } else if (attraction === "water" && height >= WATERSLIDE_MIN_HEIGHT) {
           return true;
@@ -37,7 +37,12 @@
           return true;
         } else {
           return false;
-        }
+        } */
+        return (
+          (attraction === "wave" && height >= WAVE_POOL_MIN_HEIGHT) ||
+          (attraction === "water" && height >= WATERSLIDE_MIN_HEIGHT) ||
+          (attraction === "river" && height >= LAZY_RIVER_MIN_HEIGHT)
+        ); // my preference
       }
     </script>
   </body>
