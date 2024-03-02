@@ -19,7 +19,7 @@
         do {
           guess = prompt(
             `I am thinking of one of these colors:\n\n ${COLORS_ARRAY.join(", ")} \n\nWhat color am I thinking of?\n`
-          );
+          ).toLowerCase();
           if (guess === null) {
             alert(`Game cancelled.`);
             return;
