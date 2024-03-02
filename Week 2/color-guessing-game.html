@@ -28,7 +28,6 @@
           numTries++;
         } while (!correct);
         alert(`Congrats! You guessed the right color in ${numTries} guesses.`);
-        document.body.style.background = guess;
       }
       //
       function checkGuess(guess, target) {
@@ -42,6 +41,7 @@
           alert(`Nope, sorry.\n(Hint: Your color is alphabetically higher than mine.)`);
         } else {
           correct = true;
+          document.body.style.background = guess;
           return correct;
         }
       }
