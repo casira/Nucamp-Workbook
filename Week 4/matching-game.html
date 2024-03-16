@@ -26,16 +26,20 @@
     <script>
       let numberOfFaces = 5;
       const theLeftSide = document.getElementById("leftSide");
+      const theRightSide = document.getElementById("rightSide");
       function generateFaces() {
         for (let i = 0; i < numberOfFaces; i++) {
           let face = document.createElement("img");
-          face.src = "images/smile.png";
+          face.src = "../images/smile.png";
           let randomTop = Math.floor(Math.random() * 400) + 1;
           let randomLeft = Math.floor(Math.random() * 400) + 1;
           face.style.top = randomTop + "px";
           face.style.left = randomLeft + "px";
           theLeftSide.appendChild(face);
         }
+        const leftSideImages = theLeftSide.cloneNode(true);
+        const rightSideImages = leftSideImages.removeChild(leftSideImages.lastChild);
+        theRightSide.appendChild(leftSideImages);
       }
     </script>
   </body>
