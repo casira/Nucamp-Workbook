@@ -5,7 +5,7 @@ function showPattern() {
   let width = 500;
   let height = 500;
   //loop just causes a constant refresh...unclear about objective
-  while (width < 50) {
+  while (width > 50) {
     const randomColorIdx = Math.floor(Math.random() * colorsArr.length);
     const newDiv = document.createElement("div");
     newDiv.style.top = topPosition + "px";
